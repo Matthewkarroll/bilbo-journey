@@ -20,7 +20,7 @@
 
 ## 📸 Demo
 
-*(I highly recommend adding a screenshot of your map here! To do this: take a screenshot of your map, drag and drop it into this file while in VS Code, and it will upload a nice image).*
+![App Demo](demo.png)
 
 ---
 
