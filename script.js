@@ -76,16 +76,16 @@ async function updateMap() {
 
 async function walk() {
     const miles = document.getElementById('milesInput').value;
-    await fetch(API_URL + '/walk'), {
+    await fetch(API_URL + '/walk', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ miles_walked: parseInt(miles), trip_type: "one_way" })
+        body: JSON.stringify({ miles_walked: parseInt(miles), trip_type: "one_way" }),
     });
     updateMap();
 }
 
 async function resetJourney() {
-    await fetch(API_URL + '/reset'), { method: 'POST' });
+        await fetch(API_URL + '/reset', { method: 'POST' });
     
     // UNCHECK ALL CHECKBOXES
     const checkboxes = document.querySelectorAll('.stop-check');
