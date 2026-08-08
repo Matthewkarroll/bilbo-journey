@@ -110,7 +110,9 @@
             <label><input type="checkbox" class="stop-check" value="The Lonely Mountain"> 🐉 The Lonely Mountain</label>
         </div>
     </div>
-
+    
+<!-- Force preload the map image so it doesn't time out -->
+<link rel="preload" as="image" href="middle-earth.jpg">
     <!-- Load Leaflet JS for the map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Load your custom script -->
