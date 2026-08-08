@@ -24,7 +24,7 @@ const map = L.map('map', {
 });
 
 const bounds = [[0, 0], [600, 1500]]; 
-L.imageOverlay('middle-earth.jpg', bounds).addTo(map);
+L.imageOverlay(MAP_IMAGE, bounds).addTo(map);
 map.fitBounds(bounds);
 
 async function updateMap() {
