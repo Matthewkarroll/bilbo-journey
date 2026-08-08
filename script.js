@@ -1,3 +1,5 @@
+const API_URL = "https://bilbo-journey.onrender.com";
+
 const locations = {
     "Bag End": { x: 0, y: 0 },
     "Caught by trolls": { x: 0, y: 0 },
@@ -26,7 +28,7 @@ L.imageOverlay('middle-earth.jpg', bounds).addTo(map);
 map.fitBounds(bounds);
 
 async function updateMap() {
-    const response = await fetch('http://127.0.0.1:8000/');
+    const response = await fetch(API_URL);
     const data = await response.json();
     
     // UPDATED STATUS ID TO MATCH HTML
@@ -74,7 +76,7 @@ async function updateMap() {
 
 async function walk() {
     const miles = document.getElementById('milesInput').value;
-    await fetch('http://127.0.0.1:8000/walk', {
+    await fetch(API_URL + '/walk'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ miles_walked: parseInt(miles), trip_type: "one_way" })
@@ -83,7 +85,7 @@ async function walk() {
 }
 
 async function resetJourney() {
-    await fetch('http://127.0.0.1:8000/reset', { method: 'POST' });
+    await fetch(API_URL + '/reset'), { method: 'POST' });
     
     // UNCHECK ALL CHECKBOXES
     const checkboxes = document.querySelectorAll('.stop-check');
