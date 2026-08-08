@@ -3,7 +3,9 @@
 const API_URL = "https://bilbo-journey.onrender.com";
 
 // Use the full URL to force the browser to fetch it from the live site
-const MAP_IMAGE = window.location.origin + "/middle-earth.jpg";
+// Set the map image path
+const MAP_IMAGE = "middle-earth.jpg";
+console.log("Looking for map image at:", MAP_IMAGE);
 
 // --- LOCATIONS ON THE MAP ---
 const locations = {
